@@ -49,7 +49,7 @@ export default function CreateProductPage() {
               className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
               id="grid-product-name"
               type="text"
-              placeholder="Bánh mỳ bò"
+              placeholder="Bánh mỳ gà"
               onChange={e => setFormData((prev) => ({...prev, name: e.target.value}))} />
           </div>
           <div className="w-full md:w-1/2 px-3">
