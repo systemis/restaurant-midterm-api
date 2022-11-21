@@ -30,6 +30,17 @@ class ProductController extends Controller
      * @return product.
      */
     function createProduct(Request $request) {
+      // $validated = $request->validate([
+      //   'name' => 'required|unique:posts|max:255',
+      //   'content' => 'required',
+      //   'image' => 'required',
+      //   'pices' => '',
+      // ]);
+
+      // if (!$validated) {
+      //   return "Data is not validated";
+      // }
+
       $product = new Product();
       // $product->id = $request->id;
       $product->name = $request->name;
@@ -37,6 +48,7 @@ class ProductController extends Controller
       $product->content = $request->content;
       $product->pices = $request->pices;
       $product->price = $request->price;
+      $product->category = $request->category;
       $product->save();
 
       return new ProductResource($product);
