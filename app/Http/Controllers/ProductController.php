@@ -82,12 +82,6 @@ class ProductController extends Controller
   function removeProduct(Request $request, $id)
   {
     $product = Product::find($id);
-    $product->name = $request->name;
-    $product->image = $request->image;
-    $product->content = $request->content;
-    $product->pices = $request->pices;
-    $product->price = $request->price;
-    $product->category = $request->category;
     $product->delete();
   }
 }
