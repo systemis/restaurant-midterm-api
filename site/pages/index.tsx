@@ -68,7 +68,7 @@ export default function IndexPage() {
       <section className='services' id='services'>
         <div className='max-width'>
           <h3 className='title title-comdia'></h3>
-          {product.filter(item => item.category === "comdia").map((item, index) => {
+          {product.filter((item: any) => item.category === "comdia").map((item: any, index) => {
             return (
               <ComdiaProduct
                 key={`comdiaitem-${index}`}
@@ -86,7 +86,7 @@ export default function IndexPage() {
         <div className='max-width'>
           <h3 className='title1'></h3>
           <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-            {product.filter(item => item.category === "banhmy").map((item, index) => {
+            {product.filter((item: any) => item.category === "banhmy").map((item: any, index) => {
               return (
                 <BanhMyProduct
                   key={`comdiaitem-${index}`}
@@ -106,7 +106,7 @@ export default function IndexPage() {
         <div className='max-width'>
           <h3 className='title2'></h3>
           <div className="product-container">
-            {product.filter(item => item.category === "monnuoc").map((item, index) => {
+            {product.filter((item: any) => item.category === "monnuoc").map((item: any, index) => {
               return <ServiceProduct 
                 key={`service-product-${index}`}
                 image={item.image}

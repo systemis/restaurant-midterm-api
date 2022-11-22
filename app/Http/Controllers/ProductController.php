@@ -79,7 +79,7 @@ class ProductController extends Controller
    * @todo Remove product bt id.
    * @return product.
    */
-  function removeProduct(Request $request, $id)
+  function deleteProduct(Request $request, $id)
   {
     $product = Product::find($id);
     $product->delete();
