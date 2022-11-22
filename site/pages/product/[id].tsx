@@ -11,7 +11,7 @@ export default function ProductDetailPage() {
     try {
       const fetchData = await axios.get(`http://localhost:3002/api/product/${router?.query?.id}`);
       setProduct(fetchData.data.data);
-    } catch {}
+    } catch { }
   }
 
   useEffect(() => {
@@ -47,8 +47,13 @@ export default function ProductDetailPage() {
             </div>
           </div>
         </div>
-
       </section >
+
+      <section className='detail' id='details'>
+        <div className='max-width'>
+          <h3 className='title4'></h3>
+        </div>
+      </section>
     </div >
   );
 }
